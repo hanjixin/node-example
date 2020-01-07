@@ -5,4 +5,4 @@ socket.on('message',function(msg,rinfo){
   console.log(rinfo);
    socket.send(msg,0,msg.length,rinfo.port,rinfo.address);
 });
-socket.bind(1234,'localhost');
+socket.bind(4000,'localhost');

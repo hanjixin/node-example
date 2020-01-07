@@ -4,8 +4,8 @@ socket.on('message',function(msg,rinfo){
     console.log(msg.toString());
     console.log(rinfo);
 });
-socket.setTTL(128);
-socket.send(new Buffer('hello'),0,6,1234,'localhost',function(err,bytes){
+// socket.setTTL(128);
+socket.send(new Buffer('hello'),0,6,4000,'localhost',function(err,bytes){
     console.log('发送了个%d字节',bytes);
 });
 socket.on('error',function(err){
