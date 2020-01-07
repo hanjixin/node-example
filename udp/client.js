@@ -1,3 +1,4 @@
+const dgram = require('dgram')
 var socket = dgram.createSocket('udp4');
 socket.on('message',function(msg,rinfo){
     console.log(msg.toString());
