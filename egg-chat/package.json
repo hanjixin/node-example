@@ -8,8 +8,12 @@
   },
   "dependencies": {
     "egg": "^2.15.1",
+    "egg-cors": "^2.2.3",
+    "egg-jwt": "^3.1.7",
+    "egg-mongoose": "^3.2.0",
     "egg-scripts": "^2.11.0",
-    "egg-socket.io": "^4.1.6"
+    "egg-socket.io": "^4.1.6",
+    "gravatar": "^1.8.0"
   },
   "devDependencies": {
     "autod": "^3.0.1",

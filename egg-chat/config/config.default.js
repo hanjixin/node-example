@@ -21,7 +21,7 @@ module.exports = appInfo => {
   config.io = {
     namespace: {
       '/': {
-        connectionMiddleware: [ 'connect' ],
+        connectionMiddleware: ['connect'],
         packetMiddleware: [],
       },
     },
@@ -30,7 +30,21 @@ module.exports = appInfo => {
   const userConfig = {
     // myAppName: 'egg',
   };
-
+  userConfig.mongoose = {
+    client: {
+      url: 'mongodb://127.0.0.1:27017/hank',
+      options: {
+        useUnifiedTopology: true,
+      },
+    },
+  };
+  userConfig.jwt = {
+    secret: 'zfpx',
+  };
+  userConfig.security = {
+    csrf: false,
+    domainWhiteList: [ '*' ],
+  };
   return {
     ...config,
     ...userConfig,
