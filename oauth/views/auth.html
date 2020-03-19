@@ -1,0 +1,44 @@
+<%include header.html%>
+<div class="row">
+    <div class="col-md-12">
+       <form method="POST">
+           <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="text-center">快速登录</h3>
+                    </div>
+                    <div class="panel-body text-center">
+                        <img src="<%=user.avatar%>" style="display:inline-block" class="img-responsive" alt="头像">
+                    </div>
+                    <div class="panel-footer text-center">
+                      <input type="submit" class="btn btn-primary" value="授权并登录">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+              <ul class="list-group">
+                 <li class="list-group-item"><%=client.website%>将获得以下权限：</li>
+                 <li class="list-group-item">
+                   <div class="checkbox">
+                           <label>
+                            <input type="checkbox">全选
+                        </label>
+                   </div>
+                   <%permissions.forEach(function(permission){%>
+                      <div class="checkbox">
+                           <label>
+                            <input type="checkbox" name="permissions" value="<%=permission._id%>"><%=permission.name%>
+                        </label>
+                      </div>
+                   <%})%>
+                 </li>
+                 <li class="list-group-item">授权后表明你已同意 QQ登录服务协议</li>
+              </ul>
+            </div>
+        </div>
+       </form>
+    </div>
+</div>
+<%include footer.html%>
