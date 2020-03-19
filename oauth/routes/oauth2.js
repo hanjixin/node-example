@@ -14,6 +14,10 @@ router.get('/authorize',async function (req,res,next) {
     }
     redirect_uri=decodeURIComponent(redirect_uri);
     let client=await Application.findById(client_id);
+    console.log(client)
+    if(!client) {
+        return next(res.createError(400,'client_id 不合法'));
+    }
     if (client.redirect_uri !== redirect_uri) {
         return next(res.createError(400,'传入的回调地址不匹配'));
     }
