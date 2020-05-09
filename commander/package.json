@@ -1,0 +1,23 @@
+{
+  "name": "commander",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "mycli": "./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^5.1.0",
+    "gitclone": "^2.0.0",
+    "open": "^7.0.3",
+    "parse-github-url": "^1.0.2",
+    "shelljs": "^0.8.4",
+    "stringify-github-short-url": "^3.3.8"
+  }
+}
