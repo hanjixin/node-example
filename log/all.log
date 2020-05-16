@@ -1,0 +1,10 @@
+[2020-05-14T14:07:56.710] [DEBUG] cheese - Got cheese.
+[2020-05-14T14:07:56.713] [INFO] cheese - Cheese is Comté.
+[2020-05-14T14:07:56.713] [WARN] cheese - Cheese is quite smelly.
+[2020-05-14T14:07:56.713] [ERROR] cheese - Cheese is too ripe!
+[2020-05-14T14:07:56.713] [FATAL] cheese - Cheese was breeding ground for listeria.
+[2020-05-14T14:07:56.713] [DEBUG] allLog - Got cheese.
+[2020-05-14T14:07:56.713] [INFO] allLog - Cheese is Comté.
+[2020-05-14T14:07:56.713] [WARN] allLog - Cheese is quite smelly.
+[2020-05-14T14:07:56.713] [ERROR] allLog - Cheese is too ripe!
+[2020-05-14T14:07:56.713] [FATAL] allLog - Cheese was breeding ground for listeria.

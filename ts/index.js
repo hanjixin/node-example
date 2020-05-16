@@ -73,6 +73,7 @@ var c;
 var d;
 (function (d) {
     function toUpperCase(target, propertyKey) {
+        // console.log(desc, 'desc')
         var value = target[propertyKey];
         var getter = function () {
             return value;
@@ -91,13 +92,24 @@ var d;
             });
         }
     }
+    function noEnumerable(target, property, descriptor) {
+        console.log('target.getName', target.getName);
+        console.log('target.getAge', target.getAge);
+        descriptor.enumerable = true;
+    }
     var Test = /** @class */ (function () {
         function Test() {
             this.name = 'hank';
         }
+        Test.prototype.getName = function () {
+            console.log(this.name);
+        };
         __decorate([
             toUpperCase
         ], Test.prototype, "name");
+        __decorate([
+            noEnumerable
+        ], Test.prototype, "getName");
         return Test;
     }());
     console.log(new Test().name);
