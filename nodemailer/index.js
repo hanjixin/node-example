@@ -11,11 +11,11 @@ async function main() {
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
     host: 'smtp.163.com',
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    port: 465, // false 587
+    secure: true, // true for 465, false for other ports
     auth: {
-      user: testAccount.user, // generated  user
-      pass: testAccount.pass, // generated  password
+      user: '15501259989@163.com', // generated  user
+      pass: '', // generated  password
     },
   });
 
