@@ -3,6 +3,9 @@ const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 const path = require("path");
 const app = exprss();
+const cors = require('cors');
+
+app.use(cors());
 
 let userRouter = require("./routes/user");
 app.use("/users", userRouter);

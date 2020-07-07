@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+
+
 /**
  * @swagger
  * /users/hello:
@@ -24,6 +26,9 @@ const router = express.Router();
  */
 router.get("/hello", (req, res) => {
   let name = req.query.name;
-  res.send("hello" + name);
+  res.cookie('name', name, { expires: new Date(Date.now() + 900000), httpOnly: false, })
+  res.send({
+    name: name
+  });
 });
 module.exports = router;
